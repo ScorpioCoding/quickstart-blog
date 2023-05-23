@@ -1,0 +1,29 @@
+@use 'sass:map';
+
+@mixin color-scheme($ct, $clr) {
+  --txt1: map.get($ct, 'txt1');
+  --txt2: map.get($ct, 'txt2');
+  --txt3: map.get($ct, 'txt3');
+  --hue: map.get($clr, 'hue');
+  --brand: map.get($clr, 'brand');
+  --surface1: map.get($clr, 'surface1');
+  --surface2: map.get($clr, 'surface2');
+  --surface3: map.get($clr, 'surface3');
+  --surface4: map.get($clr, 'surface4');
+}
+
+/* mixin serif
+* @param $width  -default : 45em
+*
+*/
+@mixin mq($width: 45em) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin container($width: 90%, $max-width: 50em) {
+  width: $width;
+  margin: 0 auto;
+  max-width: $max-width;
+}

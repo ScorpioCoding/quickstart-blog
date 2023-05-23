@@ -1,0 +1,71 @@
+body {
+  background-color: var(--surface-4);
+  color: var(--txt-light);
+}
+
+
+
+.rad-shadow {
+  border: 1px solid hsl(var(--primary) 10% 50% / 15%);
+  box-shadow: 0 1rem 0.5rem -0.5rem;
+  box-shadow: 0 2.8px 2.2px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.03)),
+    0 6.7px 5.3px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.01)),
+    0 12.5px 10px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.02)),
+    0 22.3px 17.9px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.02)),
+    0 41.8px 33.4px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--shadow) / var(--shadow-strength));
+}
+
+.brand {
+  color: var(--brand);
+  background-color: var(--brand);
+}
+
+.accent {
+  color: var(--accent);
+  background-color: var(--accent);
+}
+
+.txt-brand {
+  color: var(--txt-brand);
+}
+
+.txt-accent {
+  color: var(--txt-accent);
+}
+
+.txt-change {
+  color: var(--txt-change);
+}
+
+.txt-dim {
+  color: var(--txt-dim);
+}
+
+.txt-dark {
+  color: var(--txt-dark);
+}
+
+.txt-light {
+  color: var(--txt-light);
+}
+
+.surface1 {
+  background-color: var(--surface-1);
+  color: var(--txt-dark);
+}
+
+.surface2 {
+  background-color: var(--surface-2);
+  color: var(--txt-dark);
+}
+
+.surface3 {
+  background-color: var(--surface-3);
+  color: var(--txt-light);
+}
+
+.surface4 {
+  background-color: var(--surface-4);
+  color: var(--txt-light);
+}

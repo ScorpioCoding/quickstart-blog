@@ -34,8 +34,9 @@ class Database extends PDO
 
       );
     } catch (PDOException $e) {
-      echo 'ERROR!';
-      print_r($e);
+      echo "Core::Database:: Connection to Database Failed.";
+      echo "<br><br>";
+      echo $e->getMessage();
     }
 
     //END-Func

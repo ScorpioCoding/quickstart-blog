@@ -3,7 +3,8 @@ CREATE DATABASE IF NOT EXISTS scorpio;
 USE scorpio;
 
 CREATE TABLE IF NOT EXISTS accounts ( 
-  id SERIAL PRIMARY KEY,   
+  id SERIAL PRIMARY KEY,  
+  name VARCHAR(255) UNIQUE, 
   email VARCHAR(255) UNIQUE,
   email_validated BOOLEAN DEFAULT FALSE,
   permission VARCHAR(50) NOT NULL,

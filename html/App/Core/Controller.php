@@ -40,7 +40,7 @@ abstract class Controller
           $this->after();
         }
       } else {
-        throw new NewException("Controller.php : Method $method not found in controller : " . get_class($this));
+        throw new NewException("Core::Controller::__call:: Method $method not found in controller : " . get_class($this));
       }
     } catch (NewException $e) {
       echo $e->getErrorMsg();
@@ -69,11 +69,22 @@ abstract class Controller
    * @param string : $url -> The Relative path
    * @return void
    */
-  public function redirect($url)
+  public function redirect(string $url): void
   {
-    header('Location:' . $url, true, 303);
-    //header('Location: http://bing.com', true, 301);
-    exit;
+    try {
+      if (!empty($url)) {
+        if (header('Location:' . $url, true, 303)) {
+          //header('Location: http://bing.com', true, 301);
+          exit;
+        } else {
+          throw new NewException("Core::Controller::redirect:: The redirect did not execute");
+        }
+      } else {
+        throw new NewException("Core::Controller::redirect:: Url required");
+      }
+    } catch (NewException $e) {
+      echo $e->getErrorMsg();
+    }
   }
 
 
