@@ -1,0 +1,54 @@
+:root {
+  --brand: var(--boston);
+  --brand-hue: var(--boston-hue);
+  --brand-sat: var(--boston-sat);
+  --brand-light: var(--boston-light);
+
+  --accent: var(--fern);
+  --accent-hue: var(--fern-hue);
+  --accent-sat: var(--fern-sat);
+  --accent-light: var(--fern-light);
+
+  --txt-light: hsl(var(--brand-hue) calc(var(--brand-sat) / 2) 85%);
+  --txt-dark: hsl(var(--brand-hue) var(--brand-sat) 10%);
+
+  //Fixed scorpiocoding surface colors
+  --surface-1: hsl(var(--grey-hue) var(--grey-sat) 80%); //light
+  --surface-2: hsl(var(--grey-hue) var(--grey-sat) 60%); //normal
+  --surface-3: hsl(var(--grey-hue) var(--grey-sat) 40%); //medium
+  --surface-4: hsl(var(--grey-hue) var(--grey-sat) 20%); //dark
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --txt-brand: hsl(var(--brand-hue) var(--brand-sat) var(--brand-light));
+    --txt-accent: hsl(var(--accent-hue) var(--accent-sat) var(--accent-light));
+    --txt-change: hsl(var(--brand-hue) var(--brand-sat) 10%);
+    --txt-dim: hsl(var(--brand-hue) 30% 30%);
+
+    --surface-5: hsl(var(--brand-hue) 20% 89%); //light 20% 89%
+    --surface-6: hsl(var(--brand-hue) 57% 82%); //normal 20% 82%
+    --surface-7: hsl(var(--brand-hue) 25% 75%); //medium 25% 75%
+    --surface-8: hsl(var(--brand-hue) 25% 70%); //dark 25% 70%
+    --shadow: var(--brand-hue) 50% 3%;
+    --shadow-strength: 0.2;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --txt-brand: hsl(var(--brand-hue) calc(var(--brand-sat) / 2) var(--brand-light));
+    --txt-accent: hsl(var(--accent-hue) calc(var(--brand-sat) / 2) var(--accent-light));
+    --txt-change: hsl(var(--brand-hue) calc(var(--brand-sat) / 2) 85%);
+    --txt-dim: hsl(var(--brand-hue) 5% 65%);
+
+    --surface-5: hsl(var(--brand-hue) 5% 25%); //light 5% 25%
+    --surface-6: hsl(var(--brand-hue) 5% 20%); //normal 5% 20%
+    --surface-7: hsl(var(--brand-hue) 10% 15%); //medium 10% 15%
+    --surface-8: hsl(var(--brand-hue) 10% 10%); //dark 10% 10%
+    --shadow: var(--brand-hue) 50% 3%;
+    --shadow-strength: 0.7;
+  }
+}

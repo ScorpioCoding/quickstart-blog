@@ -1,0 +1,24 @@
+<div id="mySideNav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <div class="sub">
+    <h3>Dashboard</h3>
+    <a href="/dashboard" onclick="closeNav()">Dashboard</a>
+  </div>
+
+
+  <div class="sub">
+    <h3>Posts</h3>
+    <a href="/blog/list" onclick="closeNav()">Posts</a>
+  </div>
+
+
+  <? if ($data['permission'] === 'super') : ?>
+    <div class="sub">
+      <h3>Company</h3>
+      <a href=" /accounts/list" onclick="closeNav()">Accounts</a>
+    </div>
+  <? endif ?>
+
+
+</div>

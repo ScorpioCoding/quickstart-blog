@@ -1,0 +1,17 @@
+@use '../abstracts/mixins' as mix;
+
+
+/* PADDING */
+@include mix.list-loop('.p-', 'padding');
+
+/* PADDING LEFT */
+@include mix.list-loop('.pl-', 'padding-left');
+
+/* PADDING RIGHT */
+@include mix.list-loop('.pr-', 'padding-right');
+
+/* PADDING INLINE */
+@include mix.list-loop('.pi-', 'padding-inline');
+
+/* PADDING BLOCK */
+@include mix.list-loop('.pb-', 'padding-block');

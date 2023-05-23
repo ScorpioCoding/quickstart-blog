@@ -1,0 +1,73 @@
+// PLACE FOR  GENERAL SCSS STYLES
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+  color-scheme: light dark;
+}
+
+img,
+svg,
+picture,
+video {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  margin-block: 10px;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+
+.flexFlow {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  place-content: center;
+  place-items: center;
+}
+
+.bgImage {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: border-box;
+  background-size: cover;
+  //box-shadow: inset 0 0 0 2000px hsla(var(--brand-hue), 90%, 10%, var(--shadow-strength));
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.sectionOverlay {
+  background-color: hsla(var(--brand-hue), 90%, 33%, 0.5);
+  border-radius: 0.5em;
+}
+
+.rad-shadow {
+  border: 1px solid hsl(var(--primary) 10% 50% / 15%);
+  box-shadow: 0 1rem 0.5rem -0.5rem;
+  box-shadow: 0 2.8px 2.2px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.03)),
+    0 6.7px 5.3px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.01)),
+    0 12.5px 10px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.02)),
+    0 22.3px 17.9px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.02)),
+    0 41.8px 33.4px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--shadow) / var(--shadow-strength));
+}
+
+.float {
+  float: right;
+}

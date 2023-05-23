@@ -1,0 +1,95 @@
+@use '../abstracts/mixins' as mix;
+
+/*------------------form -----------------------*/
+
+/* Add a background color and some padding around the form */
+.formBox {
+  border-radius: 5px;
+  padding: 2em;
+  margin: 2em;
+  background-color: var(--surface-4);
+  color: var(--txt-light);
+  width: auto;
+  height: auto;
+  font-size: var(--fs-500);
+}
+
+.formBoxSmall {
+  width: auto;
+
+  @include mix.mq() {
+    width: 600px;
+  }
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+.formBox input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+select,
+textarea {
+  border: none;
+  border-bottom: 1px dashed solid #ccc;
+  background-color: transparent;
+  color: var(--txt-light);
+
+  width: 100%;
+  /* Full width */
+  padding: 0px;
+  /* Some padding */
+  //border: 1px solid #ccc; /* Gray border */
+  //border-radius: 4px; /* Rounded borders */
+  //box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 0px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+  /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.formBox label {
+  width: 100%;
+  margin-top: 20px;
+  /* Add a top margin */
+  margin-bottom: 0px;
+  /* Bottom margin */
+  font-size: var(--fs-400);
+}
+
+/* Style the submit button with a specific background color etc */
+.formBox input[type='submit'] {
+  background-color: hsl(var(--fern-hue), var(--fern-sat), 34%);
+
+  color: var(--txt-light);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.formBox input[type='submit']:hover {
+  background-color: hsl(var(--fern-hue), 40%, 45%);
+}
+
+input[type='button'] {
+  background-color: hsl(var(--boston-hue), var(--boston-sat), 34%);
+
+  color: var(--txt-light);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type='button']:hover {
+  background-color: hsl(var(--boston-hue), 40%, 45%);
+}
+
+.formBox .group {
+  padding-block: 1em;
+}

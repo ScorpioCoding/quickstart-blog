@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+
+:root {
+  --ff-base: 'Baloo 2';
+  --ff-brand: 'Baloo 2';
+  --ff-accent: 'Syncopate', sans-serif;
+
+  --fw-900: 900;
+  --fw-800: 800;
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-500: 500;
+  --fw-400: 400;
+
+  /*1rem = 16px => 14px = 14/16 = 0.75rem*/
+  --fs-900: 3.5rem; /*56px*/
+  --fs-800: 3rem; /*48px*/
+  --fs-700: 2.5rem; /*40px*/
+  --fs-600: 2rem; /*32px*/
+  --fs-500: 1.5rem; /*24px*/
+  --fs-400: 1rem; /*16px*/
+  --fs-300: 0.875rem; /*14px*/
+  --fs-200: 0.75rem; /*12px*/
+  --fs-100: 0.5rem; /*8px*/
+
+  --f-text-dec: none;
+
+  //colors
+  --grey: hsl(0, 0%, 20%);
+  --grey-hue: 0;
+  --grey-sat: 0%;
+  --grey-light: 20%;
+
+  --crimson: hsl(354, 100%, 50%);
+  --crimson-hue: 354;
+  --crimson-sat: 100%;
+  --crimson-light: 50%;
+
+  --fern: hsl(151, 100%, 36%);
+  --fern-hue: 151;
+  --fern-sat: 100%;
+  --fern-light: 36%;
+
+  --boston: hsl(198, 64%, 46%);
+  --boston-hue: 198;
+  --boston-sat: 64%;
+  --boston-light: 46%;
+
+  --coral: hsl(19, 96%, 63%);
+  --coral-hue: 19;
+  --coral-sat: 96%;
+  --coral-light: 63%;
+
+  --razzle: hsl(310, 87%, 62%);
+  --razzle-hue: 310;
+  --razzle-sat: 87%;
+  --razzle-light: 62%;
+
+  --royal: hsl(291, 48%, 30%);
+  --royal-hue: 291;
+  --royal-sat: 48%;
+  --royal-light: 30%;
+
+  --sun: hsl(35, 89%, 62%);
+  --sun-hue: 35;
+  --sun-sat: 89%;
+  --sun-light: 62%;
+}
