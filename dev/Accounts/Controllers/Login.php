@@ -46,11 +46,6 @@ class Login extends Controller
       }
     }
 
-
-
-
-
-
     View::render($args, $meta, $trans, [
       'data' => $data
     ]);

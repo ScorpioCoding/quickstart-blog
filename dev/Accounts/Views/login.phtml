@@ -1,0 +1,29 @@
+<div class="container">
+
+  <h3>THE USER LOGIN PAGE</h3>
+  <?php if (!empty($data['errorList'])) : ?>
+    <div>
+      <p>Requirements:</p>
+      <ul>
+        <?php foreach ($data['errorList'] as $value) : ?>
+          <li><?= $value ?></li>
+        <?php endforeach ?>
+      </ul>
+    </div>
+  <?php endif ?>
+
+  <form class="formBox" action="" method="post">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="<?= $data['user_email'] ?>" <?= ($data['readonly']) ? 'readonly' : ''; ?> />
+
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" <?= ($data['readonly']) ? 'readonly' : ''; ?> />
+
+
+
+    <?php if ($data['readonly'] == false) : ?>
+      <input class="float" type="submit" value="SEND">
+    <?php endif ?>
+  </form>
+</div>
