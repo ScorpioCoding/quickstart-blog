@@ -2,7 +2,8 @@
   "trans": {
     "menu": {
       "home": "Home",
-      "about": "About"
+      "about": "About",
+      "login": "Login"
     }
   }
 }
