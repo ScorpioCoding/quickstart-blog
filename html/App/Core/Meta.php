@@ -88,20 +88,20 @@ class Meta
     $this->meta['scMetaRoute']  = strtolower($args['controller']);
 
 
-    $this->meta['scPathCss']  .= strtolower($args['module']);
+    $this->meta['scPathCss']  .= DS . strtolower($args['module']);
     $this->meta['scPathCss']  .= '/css/';
     $this->meta['scPathCss']  .= strtolower($args['controller']);
 
-    $this->meta['scPathTempCss']  .= strtolower($args['module']);
+    $this->meta['scPathTempCss']  .= DS . strtolower($args['module']);
     $this->meta['scPathTempCss']  .= '/css/';
     $this->meta['scPathTempCss']  .= strtolower($args['template']);
 
-    $this->meta['scPathJs']  .= strtolower($args['module']);
+    $this->meta['scPathJs']  .= DS . strtolower($args['module']);
     $this->meta['scPathJs']  .= '/js/';
     $this->meta['scPathJs']  .= strtolower($args['controller']);
 
 
-    $this->meta['scPathTempJs']  .= strtolower($args['module']);
+    $this->meta['scPathTempJs']  .= DS . strtolower($args['module']);
     $this->meta['scPathTempJs']  .= '/js/';
     $this->meta['scPathTempJs']  .= strtolower($args['template']);
 
