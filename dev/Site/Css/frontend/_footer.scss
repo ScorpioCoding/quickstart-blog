@@ -1,0 +1,52 @@
+footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 0.05vmax 0.05vmin;
+  width: 100%;
+  background-color: var(--surface-4);
+  color: var(--txt-light);
+}
+
+.copyright {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 0.05vmax 0.05vmin;
+  font-size: var(--fs-200);
+}
+
+.scorpio,
+.domain {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-200);
+  letter-spacing: 0.1rem;
+  text-decoration: var(--f-text-dec);
+}
+
+.domain {
+
+  &:link,
+  &:hover,
+  &:focus,
+  &:visited {
+    color: var(--brand);
+  }
+}
+
+.scorpio {
+
+  &:link,
+  &:hover,
+  &:active,
+  &:visited {
+    color: var(--crimson);
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="<?= $scMetaLanguage ?>" dir="ltr" color-scheme="auto">
+
+<head>
+  <?php include 'frontend/header.phtml'; ?>
+
+
+
+  <link rel="stylesheet" href="<?= $scPathTempCss; ?>.css">
+  <link rel="stylesheet" href="<?= $scPathCss; ?>.css">
+</head>
+
+<body>
+  <div class="grid-layout-full">
+    <header>
+      <?php include 'frontend/navigation.phtml' ?>
+    </header>
+
+    <main>
+      <?php include $page; ?>
+    </main>
+
+    <footer>
+      <?php include 'frontend/footer.phtml' ?>
+    </footer>
+  </div>
+
+
+  <script src="<?= $scPathTempJs; ?>.js"></script>
+  <script src="<?= $scPathJs; ?>.js"></script>
+</body>
+
+</html>

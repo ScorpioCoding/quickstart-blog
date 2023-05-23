@@ -1,0 +1,73 @@
+<nav class="navbar">
+  <div class="brand-title">
+
+    QuickStart
+
+  </div>
+
+  <a href="#" class="toggle-button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </a>
+  <div class="navbar-links">
+    <ul class="links">
+      <li>
+        <a <?= $scMetaController === 'Home' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/Home">
+          <?= $trans['menu']['home'] ?>
+        </a>
+      </li>
+      <li>
+        <a <?= $scMetaController === 'Why' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/Why">
+          <?= $trans['menu']['why'] ?>
+        </a>
+      </li>
+      <!-- <li>
+          <a <?= $scMetaController === 'Services' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/Services">
+            <?= $trans['menu']['services'] ?>
+          </a>
+        </li> -->
+      <li>
+        <a <?= $scMetaController === 'Gallery' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/Gallery">
+          <?= $trans['menu']['gallery'] ?>
+        </a>
+      </li>
+      <!-- <li>
+          <a <?= $scMetaController === 'Products' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/Products">
+            <?= $trans['menu']['products'] ?>
+          </a>
+        </li> -->
+      <!-- <li>
+          <a <?= $scMetaController === 'Sales' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/Sales">
+            <?= $trans['menu']['sales'] ?>
+          </a>
+        </li> -->
+      <li>
+        <a <?= $scMetaController === 'Contact' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/Contact">
+          <?= $trans['menu']['contact'] ?>
+        </a>
+      </li>
+      <li>
+        <a <?= $scMetaController === 'Location' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/Location">
+          <?= $trans['menu']['location'] ?>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="links-lang">
+      <li><a <?= $scMetaLanguage === 'en' ? 'class="active"' : '' ?> href="/en/<?= $scMetaRoute ?>">En</a>
+      </li>
+      <li>
+        <a <?= $scMetaLanguage === 'nl' ? 'class="active"' : '' ?> href="/nl/<?= $scMetaRoute ?>">Nl</a>
+      </li>
+      <li><a <?= $scMetaLanguage === 'fr' ? 'class="active"' : '' ?> href="/fr/<?= $scMetaRoute ?>">Fr</a></li>
+    </ul>
+    <!-- <div style="display: flex; padding: 0.5rem">
+        <select id="theme" class="selectTheme">
+          <option value="auto" selected>Theme</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div> -->
+  </div>
+</nav>

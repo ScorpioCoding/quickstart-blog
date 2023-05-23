@@ -1,0 +1,66 @@
+version: "3"
+
+services:
+  #nginx
+  server:
+    container_name: scserver
+    image: nginx:stable-alpine
+    restart: always
+    ports:
+      - "6080:80"
+    volumes:
+      - ../html:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - scorpionet
+
+  #php
+  app:
+    container_name: scapp
+    build:
+      context: .
+      dockerfile: ./php/Dockerfile
+    restart: always
+    volumes:
+      - ../html:/var/www/html
+    networks:
+      - scorpionet
+
+  #db
+  db:
+    container_name: scdb
+    platform: linux/x86_64
+    image: mysql:8
+    ports:
+      - 6086:3306
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./mysql/init.sql:/data/application/init.sql
+      - scdata:/var/lib/mysql
+    restart: always # always restart unless stopped manually
+    environment:
+      MYSQL_DATABASE: scorpio
+      MYSQL_ROOT_PASSWORD: r00tadmin
+    networks:
+      - scorpionet
+
+  admin:
+    container_name: scadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - 6084:80
+    networks:
+      - scorpionet
+
+volumes:
+  scdata:
+    driver: local
+    name: scdata
+
+networks:
+  scorpionet:
+    name: scorpionet

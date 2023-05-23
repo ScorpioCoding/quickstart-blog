@@ -1,0 +1,66 @@
+%btn-common {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  line-height: normal;
+  font-weight: 400;
+  font-style: normal;
+  transition: all 0.25s;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  outline: none;
+  user-select: none;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.btn {
+  @extend %btn-common;
+  width: fit-content;
+  padding: 12px 20px;
+  border: none;
+}
+
+.rad-shadow {
+  border: 1px solid hsl(var(--brand) 10% 50% / 15%);
+  box-shadow: 0 1rem 0.5rem -0.5rem;
+  box-shadow: 0 2.8px 2.2px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.03)),
+    0 6.7px 5.3px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.01)),
+    0 12.5px 10px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.02)),
+    0 22.3px 17.9px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.02)),
+    0 41.8px 33.4px hsl(var(--shadow) / calc(var(--shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--shadow) / var(--shadow-strength));
+}
+
+.btn-boston {
+  background-color: hsl(var(--boston-hue), var(--boston-sat), 34%);
+  color: var(--txt-light);
+
+  &:hover {
+    background-color: hsl(var(--boston-hue), 40%, 45%);
+  }
+}
+
+.btn-fern {
+  background-color: hsl(var(--fern-hue), var(--fern-sat), 34%);
+  color: var(--txt-light);
+
+  &:hover {
+    background-color: hsl(var(--fern-hue), 40%, 45%);
+  }
+}
+
+
+.btn-coral {
+  background-color: hsl(var(--coral-hue), var(--coral-sat), 34%);
+  color: var(--txt-light);
+
+  &:hover {
+    background-color: hsl(var(--coral-hue), 40%, 45%);
+  }
+}

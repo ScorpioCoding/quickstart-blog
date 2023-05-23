@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS scorpio;
+
+USE scorpio;
+
+CREATE TABLE IF NOT EXISTS accounts ( 
+  id SERIAL PRIMARY KEY,   
+  email VARCHAR(255) UNIQUE,
+  email_validated BOOLEAN DEFAULT FALSE,
+  permission VARCHAR(50) NOT NULL,
+  psw_hash VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);
