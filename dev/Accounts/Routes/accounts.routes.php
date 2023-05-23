@@ -19,6 +19,14 @@ return (object) array(
   ],
 
 
+  '/{lang}/accounts/login' => [
+    'module' => 'Accounts',
+    'namespace' => 'Modules\Accounts\Controllers',
+    'controller' => 'Login',
+    'action' => 'index'
+  ],
+
+
 
 
 );
