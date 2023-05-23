@@ -1,0 +1,17 @@
+@use '../abstracts/mixins' as mix;
+
+
+/* MARGIN */
+@include mix.list-loop('.m-', 'margin');
+
+/* MARGIN LEFT */
+@include mix.list-loop('.ml-', 'margin-left');
+
+/* MARGIN RIGHT */
+@include mix.list-loop('.mr-', 'margin-right');
+
+/* MARGIN INLINE */
+@include mix.list-loop('.mi-', 'margin-inline');
+
+/* MARGIN BLOCK */
+@include mix.list-loop('.mb-', 'margin-block');

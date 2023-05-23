@@ -1,3 +1,40 @@
 <div class="container">
-  <h1>THIS IS THE ADMINISTRATOR SETUP PAGE</h1>
+  <h3>THE ADMIN USER SETUP PAGE</h3>
+  <?php if (!empty($data['errorList'])) : ?>
+    <div>
+      <p>Requirements:</p>
+      <ul>
+        <?php foreach ($data['errorList'] as $value) : ?>
+          <li><?= $value ?></li>
+        <?php endforeach ?>
+      </ul>
+    </div>
+  <?php endif ?>
+
+  <form class="formBox" action="" method="post" autocomplete="off">
+    <input autocomplete="false" name="hidden" type="text" style="display:none;">
+
+    <label for="name">Username</label>
+    <input type="text" name="name" id="name" value="<?= $data['name'] ?>" <?= ($data['readonly']) ? 'readonly' : ''; ?> />
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="<?= $data['email'] ?>" <?= ($data['readonly']) ? 'readonly' : ''; ?> />
+
+    <label for="permission">Permission</label>
+    <input type="text" name="permission" id="permission" readonly value="super" />
+
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" <?= ($data['readonly']) ? 'readonly' : ''; ?> />
+
+
+    <label for="psw_confirm">Password Confirmation</label>
+    <input type="password" name="psw_confirm" id="psw_confirm" <?= ($data['readonly']) ? 'readonly' : ''; ?> />
+
+    <?php if ($data['readonly'] == false) : ?>
+      <button type="submit" class="float btn btn-fern">CREATE</button>
+      <button type="reset" class="float mi-10 btn btn-boston">RESET</button>
+    <?php endif ?>
+  </form>
+
 </div>
