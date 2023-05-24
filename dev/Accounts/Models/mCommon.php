@@ -92,6 +92,23 @@ class mCommon extends Database
     }
   }
 
+  public static function readTableByAccountId(string $table, $id)
+  {
+    try {
+      $query = "SELECT * FROM `$table` WHERE `acc_id`=:acc_id LIMIT 1";
+      $dB = static::getdb();
+      $stmt = $dB->prepare($query);
+      $stmt->bindValue(':acc_id', $id, PDO::PARAM_INT);
+      $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+      $stmt->execute();
+      return $stmt->fetchAll();
+    } catch (PDOException $e) {
+      $e->getMessage();
+      return false;
+    }
+  }
+
   public static function readTableByType(string $table, $type)
   {
     try {

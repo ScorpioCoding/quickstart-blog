@@ -12,9 +12,9 @@ use Modules\Blog\Models\mPosts;
 
 
 /**
- *  Dashboard
+ *  Posts
  */
-class Dashboard extends Controller
+class Posts extends Controller
 {
   protected function before()
   {
@@ -32,9 +32,12 @@ class Dashboard extends Controller
     // Extra data
     $data = array();
 
-    $data['drafts'] = mPosts::countByStatus('drafts');
-    $data['published'] = mPosts::countByStatus('published');
-    $data['archived'] = mPosts::countByStatus('archived');
+    $data['status'] = $args['status'];
+
+    $posts = mPosts::readByStatus($args['status']);
+    foreach ($posts as $key => $value) {
+      $data['posts'][$key] = $value;
+    }
 
 
 

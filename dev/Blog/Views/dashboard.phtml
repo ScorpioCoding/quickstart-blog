@@ -1,3 +1,18 @@
 <div class="container">
-  <h1>THIS IS THE BLOG BACKEND DASHBOARD PAGE</h1>
+  <h1>DASHBOARD PAGE</h1>
+
+  <div class="grid-columns-3 container">
+    <article>
+      <a href="/blog/posts/drafts"><?= $data['drafts'] ?></a>
+      <h3>Drafts</h3>
+    </article>
+    <article>
+      <a href="/blog/posts/published"><?= $data['published'] ?></a>
+      <h3>Published</h3>
+    </article>
+    <article>
+      <a href="/blog/posts/archived"><?= $data['archived'] ?></a>
+      <h3>Archived</h3>
+    </article>
+  </div>
 </div>

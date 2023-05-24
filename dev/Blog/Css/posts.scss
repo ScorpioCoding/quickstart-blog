@@ -1,0 +1,35 @@
+table {
+  width: 500px;
+  text-align: left;
+
+  tr:nth-child(even) {
+    background-color: var(--surface-3);
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--surface-2);
+  }
+
+  th,
+  td {
+    padding: 0.25em;
+  }
+
+  a {
+    color: var(--txt-ligt);
+    font-size: var(--fs-400);
+    padding-inline: 0.25em;
+  }
+
+  .id {
+    width: 10%;
+  }
+
+  .title {
+    width: auto;
+  }
+
+  .actions {
+    width: 15%;
+  }
+}

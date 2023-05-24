@@ -18,7 +18,21 @@ return (object) array(
     'action' => 'index'
   ],
 
+  '/blog/posts/{status}' => [
+    'lang' => 'en',
+    'module' => 'Blog',
+    'namespace' => 'Modules\Blog\Controllers',
+    'controller' => 'Posts',
+    'action' => 'index'
+  ],
 
+  '/blog/edit/{id:\d+}' => [
+    'lang' => 'en',
+    'module' => 'Blog',
+    'namespace' => 'Modules\Blog\Controllers',
+    'controller' => 'Edit',
+    'action' => 'index'
+  ],
 
 
 );

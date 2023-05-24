@@ -26,6 +26,15 @@
   border: none;
 }
 
+.btn-small {
+  @extend %btn-common;
+  width: fit-content;
+  height: fit-content;
+  padding: 2px 6px;
+  border: none;
+  font-size: var(--fs-300);
+}
+
 .rad-shadow {
   border: 1px solid hsl(var(--brand) 10% 50% / 15%);
   box-shadow: 0 1rem 0.5rem -0.5rem;

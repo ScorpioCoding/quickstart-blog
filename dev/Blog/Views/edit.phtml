@@ -1,0 +1,138 @@
+<button class="tablink" onclick="openPage('Edit', this, 'brown')" id="defaultOpen">Edit Post</button>
+<button class="tablink" onclick="openPage('Preview', this, 'brown')">Preview Page</button>
+
+<div id="Edit" class="tabcontent">
+  <form class="formBox" action="" method="post">
+    <input type="text" name="id" id="id" hidden value="<?= $data['id'] ?>">
+    <input type="text" name="acc_id" id="acc_id" hidden value="<?= $data['acc_id'] ?>">
+
+    <h3>EDIT POST ID : <?= $data['id'] ?></h3>
+    <div class="grid-columns-4">
+      <label for="author">Author
+        <input type="text" name="author" id="author" value="<?= $data['author'] ?>">
+      </label>
+
+      <label for="avatar">Avatar
+        <input type="text" name="avatar" id="avatar" value="<?= $data['avatar'] ?>">
+      </label>
+
+      <label for="date_at">Date
+        <input type="text" name="date_at" id="date_at" value="<?= $data['date_at'] ?>">
+      </label>
+
+      <label for="status">Status
+        <select id="status" name="status">
+          <option <?= ($data['status'] == 'drafts') ? 'selected' : '' ?> value="drafts">Draft</option>
+          <option <?= ($data['status'] == 'published') ? 'selected' : '' ?> value="published">Publish</option>
+          <option <?= ($data['status'] == 'archived') ? 'selected' : '' ?> value="archived">Archive</option>
+        </select>
+      </label>
+    </div>
+
+
+
+    <div class="grid-columns-5">
+      <label for="title" class="col-span2">Title
+        <input type="text" name="title" id="title" value="<?= $data['title'] ?>">
+      </label>
+
+
+      <label for="slug" class="col-span2">Slug
+        <input type="text" name="slug" id="slug" value="<?= $data['slug'] ?>">
+      </label>
+
+      <div style="place-self: center;">
+        <button type="button" class="btn-small btn-fern" onclick="createSlug()">Create Slug</button>
+      </div>
+    </div>
+
+    <div class="grid-columns-4">
+      <div class="col-span2">
+        <label for="img_landscape">Image Landscape
+          <input type="text" name="img_landscape" id="img_landscape" value="<?= $data['img_landscape'] ?>">
+        </label>
+      </div>
+      <div class="col-span2">
+        <label for="img_portrait">Image Portrait
+          <input type="text" name="img_portrait" id="img_portrait" value="<?= $data['img_portrait'] ?>">
+        </label>
+      </div>
+    </div>
+
+    <div class="grid-columns-3">
+      <div class="col-span3">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10"><?= $data['description'] ?></textarea>
+      </div>
+    </div>
+
+    <div class="grid-columns-3">
+      <div class="col-span3">
+        <label for="content">Content</label>
+        <textarea name="content" id="content" cols="30" rows="20"><?= $data['content'] ?></textarea>
+      </div>
+    </div>
+
+    <button class="float btn btn-fern" style="height: 5em;" type="submit">UPDATE BLOG POST</button>
+
+  </form>
+</div>
+
+<div id="Preview" class="tabcontent">
+
+
+  <div class="grid-columns-4">
+
+    <div class="card_landscape col-span2">
+      <div class="card_landscape_image">
+        <img src="<?= $data['img_landscape'] ?>" alt="">
+      </div>
+      <div class="card_landscape_content">
+        <h2><?= $data['title'] ?></h2>
+        <p class="desc"><?= $data['description'] ?></p>
+        <small>
+          <span><?= $data['date_at'] ?></span>
+          <span><img class="img_author" src="<?= $data['avatar'] ?>" alt="Image Author" srcset="Image Author"></span>
+          <span><?= $data['author'] ?></span>
+          <button href="#" class="card_btn float">Read More</button>
+        </small>
+      </div>
+    </div>
+
+    <div class="card_portrait col-span2">
+      <div class="card_portrait_image">
+        <img src="<?= $data['img_portrait'] ?>" alt="">
+      </div>
+      <div class="card_portrait_content">
+        <h2><?= $data['title'] ?></h2>
+        <p class="desc"><?= $data['description'] ?></p>
+        <small>
+          <button href="#" class="card_btn float">Read More</button>
+        </small>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="blog">
+    <div class="title">
+      <h2><?= $data['title'] ?></h2>
+      <small>
+        <span><?= $data['date_at'] ?></span>
+        <span><img class="img_author" src="<?= $data['avatar'] ?>" alt="Image Author" srcset="Image Author"></span>
+        <span><?= $data['author'] ?></span>
+      </small>
+    </div>
+    <div class="output">
+      <?= $data['output'] ?>
+    </div>
+
+
+    <div>
+      <textarea name="" id="" cols="30" rows="10"><?= $data['output'] ?></textarea>
+    </div>
+  </div>
+
+
+</div>
