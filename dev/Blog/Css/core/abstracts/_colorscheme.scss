@@ -4,10 +4,10 @@
   --brand-sat: var(--boston-sat);
   --brand-light: var(--boston-light);
 
-  --accent: var(--fern);
-  --accent-hue: var(--fern-hue);
-  --accent-sat: var(--fern-sat);
-  --accent-light: var(--fern-light);
+  --accent: var(--crimson);
+  --accent-hue: var(--crimson-hue);
+  --accent-sat: var(--crimson-sat);
+  --accent-light: var(--crimson-light);
 
   --txt-light: hsl(var(--brand-hue) calc(var(--brand-sat) / 2) 85%);
   --txt-dark: hsl(var(--brand-hue) var(--brand-sat) 10%);
