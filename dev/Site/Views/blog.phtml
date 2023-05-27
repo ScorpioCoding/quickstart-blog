@@ -1,0 +1,33 @@
+<div class="grid-columns-4 container">
+  <?php foreach ($data['posts'] as $post) : ?>
+
+
+
+
+    <div class="card_landscape col-span2">
+      <div class="card_landscape_image">
+        <img src="<?= $post['img_landscape'] ?>" alt="">
+      </div>
+      <div class="card_landscape_content">
+        <h2><?= $post['title'] ?></h2>
+        <p class="desc"><?= $post['description'] ?></p>
+        <small>
+          <span><?= $post['date_at'] ?></span>
+          <span><img class="img_author" src="<?= $post['avatar'] ?>" alt="Image Author" srcset="Image Author"></span>
+          <span><?= $post['author'] ?></span>
+          <button onclick="showPosts('<?= $scMetaLanguage ?>','<?= $post['slug'] ?> ')" class="card_btn float">Read
+            More</button>
+        </small>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  <?php endforeach ?>
+</div>

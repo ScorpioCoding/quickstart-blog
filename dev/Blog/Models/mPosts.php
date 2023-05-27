@@ -107,6 +107,56 @@ class mPosts extends Database
     }
   }
 
+  public static function createEmptyBlog(array $args)
+  {
+
+
+    $query = "INSERT INTO `posts` ( 
+      `id`, 
+      `acc_id`, 
+      `date_at`, 
+      `status`, 
+      `author`, 
+      `avatar`,
+      `img_landscape`,
+      `img_portrait`
+      )
+    VALUES ( 
+      :id, 
+      :acc_id, 
+      :date_at, 
+      :status, 
+      :author, 
+      :avatar,
+      :img_landscape,
+      :img_portrait
+      )";
+
+
+    $dB = static::getdb();
+    $stmt = $dB->prepare($query);
+
+    $stmt->bindValue(':id', NULL, PDO::PARAM_NULL);
+    $stmt->bindValue(':acc_id', $args['acc_id'], PDO::PARAM_INT);
+
+    $stmt->bindValue(':status', $args['status'], PDO::PARAM_STR);
+    $stmt->bindValue(':date_at', $args['date_at'], PDO::PARAM_STR);
+
+    $stmt->bindValue(':author', $args['author'], PDO::PARAM_STR);
+    $stmt->bindValue(':avatar', $args['avatar'], PDO::PARAM_STR);
+
+    $stmt->bindValue(':img_landscape', $args['img_landscape'], PDO::PARAM_STR);
+    $stmt->bindValue(':img_portrait', $args['img_portrait'], PDO::PARAM_STR);
+
+    try {
+      $stmt->execute();
+      return $dB->lastInsertId();
+    } catch (PDOException $e) {
+      echo $e->getMessage();
+      return false;
+    }
+  }
+
   public static function readByStatus(string $status)
   {
     try {

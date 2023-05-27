@@ -1,0 +1,23 @@
+<div class="container">
+  <?php if (!empty($data['errorList'])) : ?>
+    <div>
+      <?= $data['errorList'] ?>
+    </div>
+  <?php endif ?>
+</div>
+
+<div class="container">
+  <div class="blog">
+    <div class="title">
+      <h1><?= $data['title'] ?></h1>
+      <small>
+        <span><?= $data['date_at'] ?></span>
+        <span><img class="img_author" src="<?= $data['avatar'] ?>" alt="Image Author" srcset="Image Author"></span>
+        <span><?= $data['author'] ?></span>
+      </small>
+    </div>
+    <div class="output">
+      <?= $data['output'] ?>
+    </div>
+  </div>
+</div>

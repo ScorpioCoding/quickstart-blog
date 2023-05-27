@@ -22,9 +22,9 @@
 
       <label for="status">Status
         <select id="status" name="status">
-          <option <?= ($data['status'] == 'drafts') ? 'selected' : '' ?> value="drafts">Draft</option>
-          <option <?= ($data['status'] == 'published') ? 'selected' : '' ?> value="published">Publish</option>
-          <option <?= ($data['status'] == 'archived') ? 'selected' : '' ?> value="archived">Archive</option>
+          <option <?= ($data['status'] == 'drafts') ? 'selected' : '' ?> value="drafts">Drafts</option>
+          <option <?= ($data['status'] == 'published') ? 'selected' : '' ?> value="published">Published</option>
+          <option <?= ($data['status'] == 'archived') ? 'selected' : '' ?> value="archived">Archived</option>
         </select>
       </label>
     </div>
@@ -117,7 +117,7 @@
 
   <div class="blog">
     <div class="title">
-      <h2><?= $data['title'] ?></h2>
+      <h1><?= $data['title'] ?></h1>
       <small>
         <span><?= $data['date_at'] ?></span>
         <span><img class="img_author" src="<?= $data['avatar'] ?>" alt="Image Author" srcset="Image Author"></span>

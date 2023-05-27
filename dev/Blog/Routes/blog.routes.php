@@ -34,5 +34,17 @@ return (object) array(
     'action' => 'index'
   ],
 
+  '/blog/create' => [
+    'lang' => 'en',
+    'module' => 'Blog',
+    'namespace' => 'Modules\Blog\Controllers',
+    'controller' => 'Create',
+    'action' => 'index'
+  ],
+
+
+
+
+
 
 );

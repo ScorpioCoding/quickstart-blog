@@ -23,6 +23,11 @@
         </a>
       </li>
       <li>
+        <a <?= $scMetaController === 'Blog' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/Blog">
+          <?= $trans['menu']['blog'] ?>
+        </a>
+      </li>
+      <li>
         <a <?= $scMetaController === 'Login' ? 'class="active"' : '' ?> href="/<?= $scMetaLanguage ?>/accounts/login">
           <?= $trans['menu']['login'] ?>
         </a>

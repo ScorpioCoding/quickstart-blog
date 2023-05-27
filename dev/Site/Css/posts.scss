@@ -1,0 +1,27 @@
+.blog {
+  width: min(70ch, 100% - 4rem);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  background-color: transparent;
+  color: var(--txt-light);
+
+  padding: 2em;
+
+  small {
+    font-size: var(--fs-400);
+  }
+
+  .img_author {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+}
+
+.output {
+  width: min(70ch, 100% - 4rem);
+  margin-inline: auto;
+}

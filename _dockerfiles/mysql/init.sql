@@ -24,8 +24,8 @@ CREATE TABLE IF NOT EXISTS profiles (
 
 CREATE TABLE `posts` (
   `id` SERIAL PRIMARY KEY,
-  `title` varchar(255) NOT NULL,
-  `slug` varchar(255) NOT NULL,
+  `title` varchar(255),
+  `slug` varchar(255),
   `status` enum('drafts','published','archived') NOT NULL,
   `date_at` VARCHAR(50),
   `author` varchar(255) NOT NULL,

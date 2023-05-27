@@ -3,6 +3,7 @@
     "menu": {
       "home": "Home",
       "about": "About",
+      "blog": "Blog",
       "login": "Login"
     }
   }

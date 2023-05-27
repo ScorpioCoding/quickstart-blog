@@ -8,13 +8,13 @@ use App\Core\Session;
 
 class Auth
 {
-  public static function sessionUp(object $user): bool
+  public static function sessionUp(object $acc): bool
   {
-    if ($user) {
+    if ($acc) {
       $session = new Session();
       $session->set('auth', 'true');
-      $session->set('user_id', $user->id);
-      $session->set('user_permission', $user->permission);
+      $session->set('id', $acc->id);
+      $session->set('permission', $acc->permission);
       $session->set('created', time());
       return true;
       exit;
@@ -58,8 +58,8 @@ class Auth
     try {
       $session = new Session();
       $session->remove('auth');
-      $session->remove('user_id');
-      $session->remove('User_permission');
+      $session->remove('id');
+      $session->remove('permission');
       $session->clear();
       $session->destroy();
       $rtn = true;
