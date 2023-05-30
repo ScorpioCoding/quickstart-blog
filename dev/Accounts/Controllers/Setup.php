@@ -12,7 +12,7 @@ use Modules\Accounts\Utils\Auth;
 
 
 /**
- *  Setup
+ *  Accounts - Setup
  */
 class Setup extends Controller
 {

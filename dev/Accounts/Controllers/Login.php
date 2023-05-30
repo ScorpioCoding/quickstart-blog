@@ -12,7 +12,7 @@ use Modules\Accounts\Utils\Auth;
 
 
 /**
- *  Admin - Login
+ *  Accounts - Login
  */
 class Login extends Controller
 {

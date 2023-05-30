@@ -8,7 +8,7 @@ use Modules\Accounts\Utils\Auth;
 
 
 /**
- *  Admin - Logout
+ *  Accounts - Logout
  */
 class Logout extends Controller
 {

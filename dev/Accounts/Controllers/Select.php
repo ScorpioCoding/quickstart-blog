@@ -11,7 +11,7 @@ use Modules\Accounts\Utils\Auth;
 
 
 /**
- *  Select
+ *  Accounts - Select
  */
 class Select extends Controller
 {
